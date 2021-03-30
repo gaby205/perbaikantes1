@@ -84,9 +84,9 @@ export class FotoService {
     reader.onerror = reject;
     reader.onload = () => {
       resolve(reader.result);
-    };
+    }
     reader.readAsDataURL(blob);
-  } )
+  });
 
   public async loadFoto(){
     const listFoto = await Storage.get({key: this.keyFoto});
@@ -104,20 +104,15 @@ export class FotoService {
         const blob = await response.blob();
 
         foto.dataImage = new File([blob], foto.filePath,{
-          type : "image/jpg"
+          type : "image/jpeg"
         });
       }
     }
-	
-  }
-
-
-}
-
+  };
+};
 
 export interface Photo{
   filePath : string;
   webviewPath : string;
   dataImage : File;
-  //bisa ditaruh disini atp di atas injectible
 }

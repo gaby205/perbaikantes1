@@ -61,7 +61,7 @@ export class Tab3Page {
       console.log(error);
     });
   }
-
+  
   uploadFoto(){
     this.urlImageStorage=[];
     for  ( var index in this.fotoService.dataFoto){
