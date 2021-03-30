@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Halaman 1
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-text color="tertiary">
+        <h3>Data Pribadi</h3>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <p><ion-text color="Tertiary"> Name : </ion-text>Gabriela Consuelo Heriyanto</p>
+      <p><ion-text color="Primary"> NRP : </ion-text>C14180055</p>
+      <p><ion-text color="Success"> Email : </ion-text>c14180055@john.petra.ac.id</p>
+      <p><ion-text color="Danger"> HP : </ion-text>085771824791</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
