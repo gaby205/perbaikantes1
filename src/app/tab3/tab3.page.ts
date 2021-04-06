@@ -2,6 +2,7 @@ import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FotoService } from '../service/foto.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface fileFoto{
   name : string; //filepath
@@ -18,7 +19,8 @@ export class Tab3Page {
 
   constructor(
     private afstorage : AngularFireStorage,
-    public fotoService : FotoService
+    public fotoService : FotoService,
+    public router: Router
   ) { }
 
   async ngOnInit() {
@@ -76,6 +78,10 @@ export class Tab3Page {
 
     }
 
+  }
+
+  goTo(){
+    this.router.navigate(["./tabs/tab4"]);
   }
 
 }

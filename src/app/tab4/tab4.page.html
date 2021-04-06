@@ -1,13 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
+      <ion-button (click) ="goBack()">BACK</ion-button>
       Galeri Foto 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let isiFoto of FotoService.dataFoto; index as position;">

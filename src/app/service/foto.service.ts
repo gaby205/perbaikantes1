@@ -45,7 +45,7 @@ export class FotoService {
       const blob = await response.blob();
       const dataFoto = new File([blob], foto.path,{
         type : "image/jpeg"
-      })
+      });
 
       if (this.platform.is('hybrid')){
         return{
